@@ -18,10 +18,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-<!--                <a class="nav-link active" aria-current="page" href="#">Home</a>-->
                 <a class="nav-link" href="/add-plant">Add Plant</a>
-<!--                <a class="nav-link" href="#">Pricing</a>-->
-<!--                <a class="nav-link disabled">Disabled</a>-->
               </div>
             </div>
           </div>
@@ -32,12 +29,10 @@
             {% for plant in plants %}
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">{{ plant["name"] }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{ plant["location"] }}</h6>
-<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-                <a href="/delete-plant/{{ plant['id'] }}" class="card-link">Delete</a>
-                <a href="/plant-info/{{ plant['id'] }}" class="card-link">Info</a>
-<!--                <a href="#" class="card-link">Another link</a>-->
+                <p class="card-title">{{ plant["name"] }}</p>
+                <p class="card-subtitle">{{ plant["location"] }}</p>
+                <a href="/delete-plant/{{ plant['id'] }}">Delete</a>
+                <a href="/plant-info/{{ plant['id'] }}">Info</a>
               </div>
             </div>
         {% endfor %}
